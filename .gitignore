@@ -1,0 +1,12 @@
+.DS_Store
+jest/*
+coverage
+node_modules
+build/
+.env*
+
+# package directories
+jspm_packages
+
+# Serverless directories
+.serverless

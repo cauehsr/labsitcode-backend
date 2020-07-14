@@ -1,0 +1,18 @@
+service: express-starter
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 
+          path: '{proxy+}'
+          method: any
+
+plugins:
+  - serverless-offline
